@@ -32,7 +32,7 @@ npm start
 
 ## 도서 구매
 
-- 책 표지 -
+![Book Cover](https://github.com/Alchemist85K/my-first-react-native/blob/main/.github/img/cover.jpg)
 
 [교보문고]()  
 [예스24]()  
