@@ -34,6 +34,6 @@ npm start
 
 ![Book Cover](https://github.com/Alchemist85K/my-first-react-native/blob/main/.github/img/cover.jpg)
 
-[교보문고]()  
-[예스24]()  
-[알라딘]()
+[교보문고](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791162243879&orderClick=LEa&Kc=)  
+[예스24](http://www.yes24.com/Product/Goods/97163575)  
+[알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=262548791)
