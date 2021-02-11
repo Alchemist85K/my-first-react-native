@@ -14,3 +14,7 @@ cd react-native-style
 npm install
 npm start
 ```
+
+## 오타 수정
+
+- [2021-02-11](https://github.com/Alchemist85K/my-first-react-native/blob/main/chapter04/CHANGELOG.md#2021-02-11)

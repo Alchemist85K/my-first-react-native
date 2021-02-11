@@ -37,3 +37,7 @@ npm start
 [교보문고](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791162243879&orderClick=LEa&Kc=)  
 [예스24](http://www.yes24.com/Product/Goods/97163575)  
 [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=262548791)
+
+## 오타 수정
+
+- [2021-02-11](https://github.com/Alchemist85K/my-first-react-native/blob/main/chapter04/CHANGELOG.md#2021-02-11)
