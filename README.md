@@ -10,6 +10,12 @@
 git clone git@github.com:Alchemist85K/my-first-react-native.git
 ```
 
+또는
+
+```
+git clone https://github.com/Alchemist85K/my-first-react-native.git
+```
+
 2. 디렉터리 이동  
    실습을 진행하는 장에 맞는 디렉터리로 이동하세요.
 
