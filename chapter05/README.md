@@ -1,5 +1,16 @@
 # 5장 할 일 관리 애플리케이션
 
+## async-storage 설치
+
+`AsyncStorage` 사용을 위해 설치하는 `async-storage`는 아래 명령어를 이용해서 설치하시기 바랍니다.
+
+```bash
+expo install @react-native-async-storage/async-storage
+```
+
+[async-storage docs](https://react-native-async-storage.github.io/async-storage/docs/install)  
+[Expo AsyncStorage docs](https://docs.expo.io/versions/v40.0.0/sdk/async-storage/)
+
 ## expo-app-loading 설치
 
 `Expo SDK 40` 부터 `<AppLoading />`을 사용하기 위해서 `expo-app-loading`을 설치해야 합니다.
