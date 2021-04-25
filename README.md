@@ -49,6 +49,8 @@ npm start
 [예스24](http://www.yes24.com/Product/Goods/97163575)  
 [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=262548791)
 
-## 오타 수정
+## 변경 사항
 
-- [2021-02-11](https://github.com/Alchemist85K/my-first-react-native/blob/main/chapter04/CHANGELOG.md#2021-02-11)
+- [2021-02-11 오타 수정](https://github.com/Alchemist85K/my-first-react-native/blob/main/CHANGELOG.md#2021-02-11)
+- [2021-04-25 Expo 버전 수정](https://github.com/Alchemist85K/my-first-react-native/blob/main/CHANGELOG.md#2021-04-25)
+- [2021-04-25 Android Permission 수정](https://github.com/Alchemist85K/my-first-react-native/blob/main/chapter09/CHANGELOG.md#2021-04-25)

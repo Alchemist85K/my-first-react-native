@@ -13,3 +13,6 @@
     - `src/components/Image.js` 수정
   - `getFocusedRouteNameFromRoute` 추가
     - `src/navigations/MainTab.js` 수정
+- Android `permissions` 수정
+  - `app.json` 수정
+  - [Expo Link](https://docs.expo.io/versions/v41.0.0/sdk/permissions/#permissionsmedia_library)
