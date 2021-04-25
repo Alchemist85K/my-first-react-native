@@ -6,6 +6,7 @@
 
 - [Expo SDK 38 책 소스 코드](https://github.com/Alchemist85K/my-first-react-native/tree/Expo-38)
 - [Expo SDK 41 업그레이드](https://github.com/Alchemist85K/my-first-react-native/tree/Expo-41)
+  - [영상 링크](https://youtu.be/nzd5Cd2Utlo)
 
 ## 소스 코드 이용
 
