@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Platform, Alert } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
-import * as Permissions from 'expo-permissions';
 import styled from 'styled-components/native';
 import PropTypes from 'prop-types';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -46,10 +45,10 @@ const Image = ({ url, imageStyle, rounded, showButton, onChangeImage }) => {
   useEffect(() => {
     (async () => {
       try {
-        if (Platform.OS === 'ios') {
-          const { status } = await Permissions.askAsync(
-            Permissions.CAMERA_ROLL
-          );
+        if (Platform.OS !== 'web') {
+          const {
+            status,
+          } = await ImagePicker.requestMediaLibraryPermissionsAsync();
           if (status !== 'granted') {
             Alert.alert(
               'Photo Permission',

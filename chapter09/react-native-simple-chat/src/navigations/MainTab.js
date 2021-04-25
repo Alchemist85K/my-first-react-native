@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Profile, ChannelList } from '../screens';
 import { MaterialIcons } from '@expo/vector-icons';
 import { ThemeContext } from 'styled-components/native';
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,12 +22,11 @@ const MainTab = ({ navigation, route }) => {
   const theme = useContext(ThemeContext);
 
   useEffect(() => {
-    const titles = route.state?.routeNames || ['Channels'];
-    const index = route.state?.index || 0;
+    const title = getFocusedRouteNameFromRoute(route) ?? 'Channels';
     navigation.setOptions({
-      headerTitle: titles[index],
+      headerTitle: title,
       headerRight: () =>
-        index === 0 && (
+        title === 'Channels' && (
           <MaterialIcons
             name="add"
             size={26}
