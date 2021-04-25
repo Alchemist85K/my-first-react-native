@@ -2,6 +2,11 @@
 
 처음 배우는 리액트 네이티브 소스 코드입니다.
 
+## 소스 코드
+
+- [Expo SDK 38 책 소스 코드](https://github.com/Alchemist85K/my-first-react-native/tree/Expo-38)
+- [Expo SDK 41 업그레이드](https://github.com/Alchemist85K/my-first-react-native/tree/Expo-41)
+
 ## 소스 코드 이용
 
 1. 소스 코드 내려받기
