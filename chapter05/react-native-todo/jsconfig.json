@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "lint": {
+          "validProperties": ["tint-color"]
+        }
+      }
+    ]
+  }
+}

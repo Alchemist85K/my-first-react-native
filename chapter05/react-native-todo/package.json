@@ -8,19 +8,20 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "~38.0.8",
-    "expo-status-bar": "^1.0.2",
+    "@react-native-async-storage/async-storage": "^1.13.0",
+    "expo": "^41.0.0",
+    "expo-app-loading": "^1.0.3",
+    "expo-status-bar": "~1.0.4",
     "prop-types": "^15.7.2",
-    "react": "~16.11.0",
-    "react-dom": "~16.11.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
-    "react-native-web": "~0.11.7",
-    "styled-components": "^5.1.1",
-    "@react-native-community/async-storage": "~1.11.0"
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
+    "react-native-web": "~0.13.12",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "babel-preset-expo": "~8.1.0"
+    "@babel/core": "~7.9.0",
+    "babel-preset-expo": "8.3.0"
   },
   "private": true
 }
