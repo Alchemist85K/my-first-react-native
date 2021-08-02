@@ -2,6 +2,44 @@
 
 리액트 네이티브의 큰 변화에 의해 소스 코드가 변경되면, 관련된 내용을 확인할 수 있습니다.
 
+## 2021-08-02
+
+- 오타 수정
+  - `src/navigations/AuthStack.js`
+    ```diff
+       <Stack.Navigator
+         initialRouteName="Login"
+         screenOptions={{
+           headerTitleAlign: 'center',
+    -      cardStyle: { backgroundColor: theme.backgroundColor },
+    +      cardStyle: { backgroundColor: theme.background },
+           headerTintColor: theme.headerTintColor,
+         }}
+       >
+    ```
+  - `src/navigations/MainStack.js`
+    ```diff
+       <Stack.Navigator
+         initialRouteName="Main"
+         screenOptions={{
+           headerTitleAlign: 'center',
+           headerTintColor: theme.headerTintColor,
+    -      cardStyle: { backgroundColor: theme.backgroundColor },
+    +      cardStyle: { backgroundColor: theme.background },
+           headerBackTitleVisible: false,
+         }}
+       >
+    ```
+  - `src/screens/ChannelList.js`
+    ```diff
+      const ItemDescription = styled.Text`
+        font-size: 16px;
+        margin-top: 5px;
+    -   color: ${({ theme }) => theme.listTime};
+    +   color: ${({ theme }) => theme.listDescription};
+      `;
+    ```
+
 ## 2021-04-25
 
 - Expo SDK 41 업그레이드

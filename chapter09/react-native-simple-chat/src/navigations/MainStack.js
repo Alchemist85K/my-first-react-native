@@ -15,7 +15,7 @@ const MainStack = () => {
       screenOptions={{
         headerTitleAlign: 'center',
         headerTintColor: theme.headerTintColor,
-        cardStyle: { backgroundColor: theme.backgroundColor },
+        cardStyle: { backgroundColor: theme.background },
         headerBackTitleVisible: false,
       }}
     >

@@ -52,6 +52,7 @@ npm start
 
 ## 변경 사항
 
-- [2021-02-11 오타 수정](https://github.com/Alchemist85K/my-first-react-native/blob/main/CHANGELOG.md#2021-02-11)
+- [2021-08-02 오타 수정](https://github.com/Alchemist85K/my-first-react-native/blob/main/CHANGELOG.md#2021-08-02)
 - [2021-04-25 Expo 버전 수정](https://github.com/Alchemist85K/my-first-react-native/blob/main/CHANGELOG.md#2021-04-25)
 - [2021-04-25 Android Permission 수정](https://github.com/Alchemist85K/my-first-react-native/blob/main/chapter09/CHANGELOG.md#2021-04-25)
+- [2021-02-11 오타 수정](https://github.com/Alchemist85K/my-first-react-native/blob/main/CHANGELOG.md#2021-02-11)

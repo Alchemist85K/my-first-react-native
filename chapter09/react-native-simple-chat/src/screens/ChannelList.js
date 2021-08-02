@@ -27,7 +27,7 @@ const ItemTitle = styled.Text`
 const ItemDescription = styled.Text`
   font-size: 16px;
   margin-top: 5px;
-  color: ${({ theme }) => theme.listTime};
+  color: ${({ theme }) => theme.listDescription};
 `;
 const ItemTime = styled.Text`
   font-size: 12px;

@@ -12,7 +12,7 @@ const AuthStack = () => {
       initialRouteName="Login"
       screenOptions={{
         headerTitleAlign: 'center',
-        cardStyle: { backgroundColor: theme.backgroundColor },
+        cardStyle: { backgroundColor: theme.background },
         headerTintColor: theme.headerTintColor,
       }}
     >
