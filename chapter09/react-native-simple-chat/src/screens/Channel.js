@@ -1,9 +1,17 @@
 import React, { useState, useEffect, useLayoutEffect, useContext } from 'react';
-import { DB, createMessage, getCurrentUser } from '../utils/firebase';
 import styled, { ThemeContext } from 'styled-components/native';
 import { Alert } from 'react-native';
 import { GiftedChat, Send } from 'react-native-gifted-chat';
 import { MaterialIcons } from '@expo/vector-icons';
+import { createMessage, getCurrentUser, app } from '../utils/firebase';
+import {
+  getFirestore,
+  collection,
+  onSnapshot,
+  query,
+  doc,
+  orderBy,
+} from 'firebase/firestore';
 
 const Container = styled.View`
   flex: 1;
@@ -36,35 +44,36 @@ const SendButton = props => {
   );
 };
 
-const Channel = ({ navigation, route: { params } }) => {
+const Channel = ({ navigation, route }) => {
   const theme = useContext(ThemeContext);
   const { uid, name, photoUrl } = getCurrentUser();
   const [messages, setMessages] = useState([]);
 
+  const db = getFirestore(app);
   useEffect(() => {
-    const unsubscribe = DB.collection('channels')
-      .doc(params.id)
-      .collection('messages')
-      .orderBy('createdAt', 'desc')
-      .onSnapshot(snapshot => {
-        const list = [];
-        snapshot.forEach(doc => {
-          list.push(doc.data());
-        });
-        setMessages(list);
+    const docRef = doc(db, 'channels', route.params.id);
+    const collectionQuery = query(
+      collection(db, `${docRef.path}/messages`),
+      orderBy('createdAt', 'desc')
+    );
+    const unsubscribe = onSnapshot(collectionQuery, snapshot => {
+      const list = [];
+      snapshot.forEach(doc => {
+        list.push(doc.data());
       });
-
+      setMessages(list);
+    });
     return () => unsubscribe();
   }, []);
 
   useLayoutEffect(() => {
-    navigation.setOptions({ headerTitle: params.title || 'Channel' });
+    navigation.setOptions({ headerTitle: route.params.title || 'Channel' });
   }, []);
 
   const _handleMessageSend = async messageList => {
     const newMessage = messageList[0];
     try {
-      await createMessage({ channelId: params.id, message: newMessage });
+      await createMessage({ channelId: route.params.id, message: newMessage });
     } catch (e) {
       Alert.alert('Send Message Error', e.message);
     }

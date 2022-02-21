@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components/native';
 import { Button, Image, Input } from '../components';
-import { logout, getCurrentUser, updateUserPhoto } from '../utils/firebase';
 import { UserContext, ProgressContext } from '../contexts';
 import { Alert } from 'react-native';
+import { getCurrentUser, updateUserInfo, signout } from '../utils/firebase';
 
 const Container = styled.View`
   flex: 1;
@@ -24,7 +24,7 @@ const Profile = () => {
   const _handleLogoutButtonPress = async () => {
     try {
       spinner.start();
-      await logout();
+      await signout();
     } catch (e) {
       console.log('[Profile] logout: ', e.message);
     } finally {
@@ -36,8 +36,8 @@ const Profile = () => {
   const _handlePhotoChange = async url => {
     try {
       spinner.start();
-      const updatedUser = await updateUserPhoto(url);
-      setPhotoUrl(updatedUser.photoUrl);
+      const photoUrl = await updateUserInfo(url);
+      setPhotoUrl(photoUrl);
     } catch (e) {
       Alert.alert('Photo Error', e.message);
     } finally {

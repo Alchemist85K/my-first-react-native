@@ -7,7 +7,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { validateEmail, removeWhitespace } from '../utils/common';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Alert } from 'react-native';
-import { login } from '../utils/firebase';
+import { signin } from '../utils/firebase';
 
 const Container = styled.View`
   flex: 1;
@@ -55,7 +55,7 @@ const Login = ({ navigation }) => {
   const _handleLoginButtonPress = async () => {
     try {
       spinner.start();
-      const user = await login({ email, password });
+      const user = await signin({ email, password });
       dispatch(user);
     } catch (e) {
       Alert.alert('Login Error', e.message);

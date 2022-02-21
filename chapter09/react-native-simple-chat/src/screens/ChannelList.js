@@ -1,9 +1,16 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { DB } from '../utils/firebase';
 import { FlatList } from 'react-native';
 import styled, { ThemeContext } from 'styled-components/native';
 import { MaterialIcons } from '@expo/vector-icons';
 import moment from 'moment';
+import { app } from '../utils/firebase';
+import {
+  getFirestore,
+  collection,
+  onSnapshot,
+  query,
+  orderBy,
+} from 'firebase/firestore';
 
 const Container = styled.View`
   flex: 1;
@@ -64,17 +71,19 @@ const Item = React.memo(
 const ChannelList = ({ navigation }) => {
   const [channels, setChannels] = useState([]);
 
+  const db = getFirestore(app);
   useEffect(() => {
-    const unsubscribe = DB.collection('channels')
-      .orderBy('createdAt', 'desc')
-      .onSnapshot(snapshot => {
-        const list = [];
-        snapshot.forEach(doc => {
-          list.push(doc.data());
-        });
-        setChannels(list);
+    const collectionQuery = query(
+      collection(db, 'channels'),
+      orderBy('createdAt', 'desc')
+    );
+    const unsubscribe = onSnapshot(collectionQuery, snapshot => {
+      const list = [];
+      snapshot.forEach(doc => {
+        list.push(doc.data());
       });
-
+      setChannels(list);
+    });
     return () => unsubscribe();
   }, []);
 
