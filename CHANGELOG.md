@@ -5,7 +5,6 @@
 ## 2022-02-21
 
 - [9장 코드 수정](https://github.com/Alchemist85K/my-first-react-native/blob/main/chapter09/CHANGELOG.md)
--
 
 ## 2021-08-02
 
