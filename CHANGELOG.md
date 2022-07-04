@@ -2,6 +2,10 @@
 
 리액트 네이티브의 큰 변화에 의해 소스 코드가 변경되면, 관련된 내용을 확인할 수 있습니다.
 
+## 2022-07-04
+
+- [9장 코드 수정](https://github.com/Alchemist85K/my-first-react-native/blob/main/chapter09/CHANGELOG.md)
+
 ## 2022-02-21
 
 - [9장 코드 수정](https://github.com/Alchemist85K/my-first-react-native/blob/main/chapter09/CHANGELOG.md)
