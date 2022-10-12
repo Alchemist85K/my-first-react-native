@@ -46,9 +46,8 @@ const Image = ({ url, imageStyle, rounded, showButton, onChangeImage }) => {
     (async () => {
       try {
         if (Platform.OS !== 'web') {
-          const {
-            status,
-          } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+          const { status } =
+            await ImagePicker.requestMediaLibraryPermissionsAsync();
           if (status !== 'granted') {
             Alert.alert(
               'Photo Permission',
@@ -81,7 +80,11 @@ const Image = ({ url, imageStyle, rounded, showButton, onChangeImage }) => {
 
   return (
     <Container>
-      <StyledImage source={{ uri: url }} style={imageStyle} rounded={rounded} />
+      <StyledImage
+        source={{ uri: `${url}?${Date.now()}` }}
+        style={imageStyle}
+        rounded={rounded}
+      />
       {showButton && <PhotoButton onPress={_handleEditButton} />}
     </Container>
   );
